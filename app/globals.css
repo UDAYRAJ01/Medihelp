@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-medical-600 hover:bg-medical-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-medical-600 font-semibold py-3 px-6 rounded-lg border-2 border-medical-600 transition-all duration-300;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-r from-medical-600 to-medical-800;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-medical-600 to-accent-600 bg-clip-text text-transparent;
+  }
+}
+
+.blog-content p{
+  font-size: 1.1rem;
+  line-height: 27.5px;
+}
+
+.blog-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #374151;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4 {
+    color: #111827;
+    font-weight: 700;
+}
+
+.blog-content h2 {
+    font-size: 28px;
+    margin-top: 15px;
+}
+
+.blog-content h3 {
+    font-size: 22px;
+    margin-top: 14px;
+}
+
+.blog-content p {
+    margin-bottom: 10px;
+}
+
+.blog-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.blog-content ul,
+.blog-content ol {
+    margin: 10px 0 10px 25px;
+    list-style: disc;
+}
+
+.blog-content a {
+    color: #2563EB;
+    text-decoration: underline;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 12px;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.quick-contact-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* ----- Blockquote Styling ----- */
+.blog-content blockquote {
+    border-left: 4px solid #3b82f6;
+    background: #f0f7ff;
+    padding: 16px 20px;
+    margin: 10px 0;
+    border-radius: 6px;
+    color: #1e3a8a;
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* ----- Inline Code (<code>) ----- */
+.blog-content code {
+    background: #f4f4f4;
+    padding: 3px 6px;
+    border-radius: 6px;
+    color: #d32f2f;
+    font-size: 0.95em;
+    font-family: "Fira Code", monospace;
+}
+
+/* ----- Code Block (<pre><code>) ----- */
+.blog-content pre {
+    background: #1e1e1e;
+    padding: 18px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+.blog-content pre code {
+    color: #ffffff;
+    background: transparent;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: "Fira Code", monospace;
+}
+
+/* ----- Address Tag Styling ----- */
+.blog-content address {
+    background: #f9fafb;
+    padding: 16px;
+    border-left: 4px solid #10b981;
+    font-style: normal;
+    font-size: 16px;
+    border-radius: 6px;
+    color: #374151;
+    margin: 20px 0;
+}
+
+/* ----- Horizontal Line Styling ----- */
+.blog-content hr {
+    border: 0;
+    border-top: 0px dashed #d1d5db;
+    margin: 5px 0;
+}
+
+/* ----- Table Styling ----- */
+.blog-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.blog-content table th {
+    background: #e5f0ff;
+    font-weight: bold;
+    padding: 12px;
+    border: 1px solid #dbeafe;
+    text-align: left;
+}
+
+.blog-content table td {
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.blog-content table tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+/* ----- Highlight (mark tag) ----- */
+.blog-content mark {
+    background: #fff3a3;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* ----- Strong emphasis style enhancement ----- */
+.blog-content strong {
+    color: #111827;
+    font-weight: 700;
+}
+
+/* ----- Fancy List Styling ----- */
+.blog-content ul li,
+.blog-content ol li {
+    margin-bottom: 8px;
+}
+
+/* ----- Callout Box (if content uses .callout) ----- */
+.blog-content .callout {
+    background: #eef6ff;
+    border-left: 4px solid #3b82f6;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* ----- Images inside paragraphs ----- */
+.blog-content img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+/* ----- Responsive YouTube / iframe embeds ----- */
+.blog-content iframe {
+    width: 100%;
+    min-height: 350px;
+    border-radius: 12px;
+    margin: 10px 0;
+}
+
